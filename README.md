@@ -1,5 +1,5 @@
 # XSS_scan
-Tool for xss scan
+Tool for xss scan. 
 We have to use both the script to find a URL where your start performing your testing of XSS attack
 
 1. First we need to run the recon.sh to filter out the subdomains.
