@@ -1,8 +1,8 @@
 # XSS_scan
 Tool for xss scan. 
-We have to use both the script to find a URL where your start performing your testing of XSS attack
+We have to use both the script to find a URL where your start performing XSS attack
 
-1. First we need to run the recon.sh to filter out the subdomains.
+**1.** First we need to run the recon.sh to filter out the subdomains.
 Before running this tool please make sure that you have all the tools that are used in the recon.sh
 # recon.sh
 In the recon.sh script, there are bunch of different tools are added. First the script will do the subdomain enumeration by using subfinder, then for probing the live hosts we used httpx, after then the GAU (GetAllURLs) tool will collects all the URL.
@@ -16,5 +16,5 @@ Overall Script mechanism of recon.sh:
 
 This param_urls.txt file will be used by xss_scan.sh script
 
-2. Second we need to run the xss_scan.sh to find out the URLs which having potential of xss attack.
+**2.** Second we need to run the xss_scan.sh to find out the URLs which having potential of xss attack.
    This script uses the dalfox tool.
