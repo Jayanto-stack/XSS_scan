@@ -34,7 +34,7 @@ cat live.txt | getallurls --o urls.txt
 cat live.txt | waybackurls >> urls.txt
 
 # Live crawling
-cat live.txt | hakrawler >> urls.txt
+cat live.txt | ~/go/bin/hakrawler >> urls.txt
 
 # 4. Filtering URLs with parameters
 # Clean + filter
