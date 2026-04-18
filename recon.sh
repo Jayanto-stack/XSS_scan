@@ -29,10 +29,18 @@ cat subdomains.txt | ~/go/bin/httpx -silent -o live.txt
 
 # 3. Getting URLs (gau)
 echo -e "${green}[+] Collecting URLs with gau..${nc}"
+# URLs from archives
 cat live.txt | getallurls --o urls.txt
+cat live.txt | waybackurls >> urls.txt
+
+# Live crawling
+cat live.txt | hakrawler >> urls.txt
 
 # 4. Filtering URLs with parameters
+# Clean + filter
 echo -e "${green}[+] Filtering URLs with parameters...${nc}"
+sort -u urls.txt > clean_urls.txt
+grep "=" clean_urls.txt > param_urls.txt
 cat urls.txt | grep "=" | tee param_urls.txt
 
 echo -e "${blue}[*] Reconnaissance completed!{nc}"
